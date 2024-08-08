@@ -17,14 +17,6 @@ public class PalindromeNumber {
             }
 
         public static void main(String[] args) {
-//            int x1 = 121;
-//            int x2 = -121;
-//            int x3 = 10;
-//
-//            System.out.println("Input: " + x1 + ", Output: " + isPalindrome(x1));
-//            System.out.println("Input: " + x2 + ", Output: " + isPalindrome(x2));
-//            System.out.println("Input: " + x3 + ", Output: " + isPalindrome(x3));
-
             Scanner s = new Scanner(System.in);
 
             System.out.println("enter value :" );
