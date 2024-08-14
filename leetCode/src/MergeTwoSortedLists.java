@@ -1,11 +1,11 @@
 public class MergeTwoSortedLists {
 
-    public ListNodeClass mergeTwoLists(ListNodeClass list1, ListNodeClass list2) {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null) return list2;
         if (list2 == null) return list1;
 
-        ListNodeClass current = null;
-        ListNodeClass result = null;
+        ListNode current = null;
+        ListNode result = null;
 
         while (list1 != null && list2 != null) {
             if (list1.val <= list2.val) {
@@ -44,28 +44,31 @@ public class MergeTwoSortedLists {
         return result;
     }
 
-    public static void printList(ListNodeClass node) {
+    public static void printList(ListNode node) {
         while (node != null) {
-            System.out.print(node.val + " ");
+            System.out.print(node.val + " -> ");
             node = node.next;
         }
-        System.out.println();
+        System.out.println("null");
     }
 
-    public static void main(String args[]) {
-        ListNodeClass l1 = new ListNodeClass(2);
-        l1.next = new ListNodeClass(4);
-        l1.next.next = new ListNodeClass(3);
+    public static void main(String[] args) {
+        // Create the first linked list: 1 -> 2 -> 4
+        ListNode list1 = new ListNode(1);
+        list1.next = new ListNode(2);
+        list1.next.next = new ListNode(4);
 
-        ListNodeClass l2 = new ListNodeClass(5);
-        l2.next = new ListNodeClass(6);
-        l2.next.next = new ListNodeClass(4);
+        // Create the second linked list: 1 -> 3 -> 4
+        ListNode list2 = new ListNode(1);
+        list2.next = new ListNode(3);
+        list2.next.next = new ListNode(4);
 
-        MergeTwoSortedLists m = new MergeTwoSortedLists();
-        ListNodeClass result = m.mergeTwoLists(l1, l2);
+        // Merge the two linked lists
+        MergeTwoSortedLists solution = new MergeTwoSortedLists();
+        ListNode mergedList = solution.mergeTwoLists(list1, list2);
 
-        // Print the merged list
-        printList(result);
+        // Print the merged linked list
+        printList(mergedList);
     }
 }
 
