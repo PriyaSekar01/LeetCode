@@ -25,6 +25,6 @@ public class MajorityElement {
         System.out.println("Majority Element: " + solution.majorityElement(nums1));
 
         int[] nums2 = {2, 2, 1, 1, 1, 2, 2};
-        System.out.println("Majority Element: " + solution.majorityElement(nums2)); 
+        System.out.println("Majority Element: " + solution.majorityElement(nums2));
     }
 }
